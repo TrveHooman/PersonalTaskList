@@ -1,8 +1,9 @@
 // *adding Slectors
-const newTaskInput = document.querySelector('#newTask');
+const taskInput = document.querySelector('#newTask');
 const taskForm = document.querySelector('#taskForm');
 const filterTasksInput = document.querySelector('#filterTasks');
 const clearBtn = document.querySelector('#clearTasks');
+const taskList = document.querySelector('#tasks');
 
 // *adding Event Listeners
 loadEventListeners();
@@ -13,9 +14,19 @@ function loadEventListeners() {
   clearBtn.addEventListener('click', clearTasks);
 }
 
+// *Adding EventListeners' Functions
+function addTask(e) {
+  const li = document.createElement('li');
+  // li.className('list-group-item);
+  if(taskInput.value === '') {
+    alert('Please enter a task below');
+  } else {
+    taskList.appendChild(li);
+  }
+  
 
-function addTask() {}
-function filterTasks() {}
-function clearTasks() {}
+  e.preventDefault();
+}
+
 
 
