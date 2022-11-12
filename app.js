@@ -46,6 +46,8 @@ function addTask(e) {
     buttonDiv.appendChild(doneLink);
     buttonDiv.classList.add('position-absolute', 'top-50','end-0', 'translate-middle');
     li.appendChild(buttonDiv);
+
+    taskInput.value = '';
     
     e.preventDefault();
   }
