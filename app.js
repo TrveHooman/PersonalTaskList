@@ -51,7 +51,6 @@ function addTask(e) {
     
     e.preventDefault();
   }
-  e.preventDefault();
 }
 
 function clearTasks() {
